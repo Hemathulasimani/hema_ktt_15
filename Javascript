@@ -1,0 +1,139 @@
+const jsonArray = [
+    { "name": "Anu", "age": 25 },
+    { "name": "Abi", "age": 30 },
+    { "name": "Charu", "age": 35 }
+];
+
+//push(adds element  into last index value)
+
+let aa={"name": "Kiki", "age":20};
+jsonArray.push(aa);
+console.log(jsonArray);
+
+//pop(deletes the last element)
+
+jsonArray.pop();
+console.log(jsonArray);
+
+//map
+
+let dd=jsonArray.map(x=> x.name);
+console.log(dd);
+
+//find
+
+let ww=jsonArray
+     .find(y=> y.name === "Abi");
+console.log(ww);
+
+//filter
+
+let rr=jsonArray.filter(z=> z.age >25);
+console.log(rr);
+ 
+ //unshift(adds the element in the starting index)
+ 
+let ss= jsonArray
+     .unshift({"name": "Priya","age": 23},
+              {"name": "kavya", "age":27});
+console.log(jsonArray);
+
+//shift(deletes the first element)
+
+let ff=jsonArray.shift();
+console.log(jsonArray);
+
+//slice(to extract)
+
+let ee=jsonArray.slice(1,3);
+console.log(ee);
+
+//splice(to delete)
+
+let tt=jsonArray.splice(0,1);
+console.log(tt);
+
+//push
+
+let uu=jsonArray.push({"name":"Abi","age":22});
+console.log(jsonArray);
+
+//remove duplicates
+
+let gg=jsonArray.filter(e=> e.name)
+.filter((e,r,t)=> t.findIndex(y => y.name === e.name) === r);
+console.log(gg);
+
+//count
+
+let hh={};
+jsonArray.forEach(k=>{hh[k.name]=(hh[k.name]||0)+1;
+});
+console.log(hh);
+
+//reverse
+
+let str = "Javascript";
+let reversedStr = " ";
+for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];}
+console.log(reversedStr);
+
+// function call
+
+function student(name){
+console.log("HELLO " + name);
+}
+student("students");
+
+//arrow funnction
+//addition
+
+let a = 10;
+let b = 20;
+let add= (a,b) => a+b;
+let result = add(a,b);
+console.log(result);
+
+//callback 
+
+function cc(name, callback) {
+    console.log('Javascript ' + name);
+    callback();
+}
+function nn() {
+    console.log('pro lang');
+}
+cc('is the',nn);
+
+//settimeout
+
+setTimeout(() => {
+let di=jsonArray.map(m=> m.name);
+console.log(di);
+    
+}, 3000);
+
+ setTimeout(()=>{
+ let xa=jsonArray.find(o=>o.name=== "Charu");
+ console.log(xa);
+ },1000);
+ 
+ //promise
+ 
+ let prom = new Promise(function(res, rej) {
+  let x = 6;
+  if (x == 6) {
+  res("Satisfied");
+  } else {
+  rej("Error");
+  }
+});
+prom.then(function(result) {
+  console.log(result); 
+}).catch(function(error) {
+  console.log(error); 
+});
+
+
+
